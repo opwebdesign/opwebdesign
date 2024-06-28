@@ -4,3 +4,23 @@ body {
     background-color: #555555;
     color: #eeeeee;
 }
+.nav {
+    width: 100%;
+    padding: .5rem 1rem;
+    background-color: #555555;
+}
+.nav-items {
+    display: flex;
+    gap: 2rem;
+    max-width: 300px;
+    margin: 0 auto;
+}
+.nav-item {
+    color: #efefef;
+    font-size: 20px;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.nav-item.active {
+    color: #000000;
+}
