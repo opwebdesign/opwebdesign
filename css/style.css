@@ -1,26 +1,17 @@
+@import url("/css/nav.css");
+
+* {
+    box-sizing: border-box;
+    font-family: "Kanit", sans-serif;
+}
 body {
     padding: 0;
     margin: 0;
-    background-color: #555555;
-    color: #eeeeee;
+    background-color: #f9f9f9;
+    color: #2e2e2e;
 }
-.nav {
-    width: 100%;
-    padding: .5rem 1rem;
-    background-color: #555555;
-}
-.nav-items {
-    display: flex;
-    gap: 2rem;
-    max-width: 300px;
-    margin: 0 auto;
-}
-.nav-item {
-    color: #efefef;
-    font-size: 20px;
-    text-decoration: none;
-    text-transform: uppercase;
-}
-.nav-item.active {
-    color: #000000;
+
+:root {
+    --primary-color: #3d76e1;
+    --secondary-color: #161563;
 }

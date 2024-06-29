@@ -1,19 +1,4 @@
-// const headerEl = document.createElement( "template" );
-
-// headerEl.innerHTML = `
-//     <style>
-//         div {
-//             background-color: #666666;
-//             padding: 1rem;
-//             text-align: center;
-//             color: #efefef;
-//             width: 100%;
-//         }
-//     </style>
-//     <div>Hello, world!!! This is a reusable web component</div>
-// `;
-
-class Header extends HTMLElement {
+class Navbar extends HTMLElement {
     constructor() {
         super();
         this.navItems = "";
@@ -31,17 +16,20 @@ class Header extends HTMLElement {
     }
 
     connectedCallback() {
-        // const shadowRoot = this.attachShadow({ mode: "closed" });
-
-        // shadowRoot.appendChild( headerEl.content );
         this.innerHTML = `
             <nav class="nav">
+                <img class="nav-logo" src="/images/logo.svg" alt="logo" />
                 <div class="nav-items">
                     ${ this.navItems }
                 </div>
             </nav>
         `;
+
+        const nav = document.querySelector( ".nav" );
+        nav.addEventListener( "click", () => {
+            console.log( "click!!!" );
+        })
     }
 }
 
-customElements.define( "header-component", Header );
+customElements.define( "nav-bar", Navbar );
